@@ -3,4 +3,4 @@ numpy
 seaborn
 matplotlib
 dill
--e .
+# -e .
