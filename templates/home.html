@@ -1,0 +1,58 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Student Exam Performance Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">How Many pregnancies</label>
+            <input class="form-control" name="Pregnancies"
+                placeholder="Enter your How many pregnancies you've had"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">What Is Your Glucose Level</label>
+            <input class="form-control" name="Glucose"
+                placeholder="Enter your Glucose score" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">What is Your BloodPressure Level</label>
+            <input class="form-control" name="BloodPressure"
+                placeholder="Enter your BP"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">SkinThickness level</label>
+            <input class="form-control" name="SkinThickness"
+                placeholder="Enter your SkinThickness" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Insulin Score</label>
+            <input class="form-control" name="Insulin"
+                placeholder="Enter your Insulin" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BMI Score</label>
+            <input class="form-control" name="BMI"
+                placeholder="Enter your BMI" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Diabetes PedigreeFunction</label>
+            <input class="form-control" name="DiabetesPedigreeFunction"
+                placeholder="Enter your Diabetes PedigreeFunction Score" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" name="Age"
+                placeholder="Enter your Age" />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Diabetes Status" required />
+        </div>
+    </form>
+    <h2>
+       THE patient is {{results}}
+    </h2>
+   <body>
+</html>
