@@ -83,12 +83,8 @@ jobs:
       
       
       - name: Pull latest images
-        env:
-          ECR_LOGIN: ${{ secrets.AWS_ECR_LOGIN_URI }}
-          ECR_REPO_NAME: ${{ secrets.ECR_REPOSITORY_NAME }}
-          IMAGE_TAG: latest
         run: |
-         docker pull $ECR_LOGIN/$ECR_REPO_NAME:$IMAGE_TAG
+         docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{secrets.ECR_REPOSITORY_NAME}}:latest
          
       # - name: Stop and remove  container if running
       #   run: |
