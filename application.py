@@ -9,7 +9,7 @@ application=Flask(__name__)
 app=application
 
 ## Route for a home page
-# Random addition
+# Remove Random addition
 
 @app.route('/')
 def index():
