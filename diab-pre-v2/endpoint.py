@@ -10,7 +10,7 @@ app=application
 ## Route for a home page
 # Remove Random addition
 serverless_classifier = pickle.load(open('diabetes_svm_model.pkl', 'rb'))
-serverless_scaler = pickle.load(open('scaler.pkl', 'rb'))
+serverless_scaler = pickle.load(open('scaler_min_max.pkl', 'rb'))
 
 @app.route('/',methods=['POST'])
 def predict_datapoint():
